@@ -1,6 +1,12 @@
+.codeInfo {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    white-space: nowrap;
 
-.codelayout {
-    padding-left: 150px;
+}
+
+.codeLayout {
+    padding-left: 130px;
 }
 
 .ico {
@@ -18,6 +24,16 @@ a {
     text-decoration: none;
 }
 
+@media screen and (max-width: 410px) {
+    .codeInfo {
+        font-size: 0.6rem;
+
+    }
+    .codeLayout {
+        padding-left: 30px;
+    }
+
+}
 
 /*!*background dot design*!*/
 /*.background {*/

@@ -6,7 +6,6 @@
 @import "contactPage.css";
 
 
-
 /*!*general css*!*/
 
 :root {
@@ -23,62 +22,52 @@
     --bg-thirdly: #4d4d4d;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-}
+/** {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*}*/
 
 html {
     scroll-behavior: smooth;
 }
 
 body {
+    margin: 0;
+    padding: 0;
     /*background: linear-gradient(to right top, var(--bg-primary), var(--bg-secondary));*/
     /*background: linear-gradient(to right top, #ffffff, #1f1f1f);*/
     background: var(--bg-primary);
     color: var(--text-primary);
     overflow-x: hidden;
+    animation: fadeIn 3s;
+    -webkit-animation: fadeIn 3s;
+    -moz-animation: fadeIn 3s;
+    -o-animation: fadeIn 3s;
+    -ms-animation: fadeIn 3s;
 }
 
 
 h1, h2, h3, h4, h5, h6 {
     color: var(--highlights);
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 2em;
 }
 
-.container{
-    padding: 30px;
+.container {
+    /*padding: 30px;*/
     margin-left: auto;
     margin-right: auto;
     color: var(--text-primary);
     width: 70%;
-    margin-top: 150px;
+    margin-top: 100px;
 
     /*opacity: 0;*/
     /*transition: 2s;*/
 }
 
-/*.about-page{*/
-/*    margin-top: 150px;*/
-/*    opacity: 0;*/
-/*    transition: 2s;*/
-/*}*/
-
-/*.skills-page {*/
-/*    margin-top: 150px;*/
-/*    opacity: 0;*/
-/*    transition: 2s;*/
-/*}*/
-
-/*.contact-page {*/
-/*    margin-top: 150px;*/
-/*    opacity: 0;*/
-/*    transition: 2s;*/
-/*}*/
 
 .show {
     opacity: 1;
@@ -97,3 +86,55 @@ body::-webkit-scrollbar-thumb {
     background: var(--highlights);
     border-radius: 1rem;
 }
+
+
+@media screen and (max-width: 410px) {
+    .container {
+        width: 97%;
+    }
+}
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @-moz-keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @-webkit-keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @-o-keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @-ms-keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }

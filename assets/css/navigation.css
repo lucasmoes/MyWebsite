@@ -94,7 +94,7 @@
 #menu {
     position: fixed;
     overflow: hidden;
-    width: 400px;
+    width: 270px;
     height: 100%;
     margin: -100px 0 0 -50px;
     padding: 125px 50px;
@@ -111,7 +111,7 @@
 
 #menu li {
     padding: 15px 0;
-    font-size: 3em;
+    font-size: 2em;
     /*font-weight: bold;*/
 }
 
