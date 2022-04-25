@@ -1,0 +1,20 @@
+@import "timeline.css";
+
+#codeInfo {
+    padding-left: 100px;
+}
+
+.codelayout {
+    padding-left: 150px;
+}
+
+.mainSkills, .toolsyears, .languages, .interests {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.gap{
+    margin: 10px 20px 50px;
+}
+
+

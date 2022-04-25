@@ -1,0 +1,99 @@
+@import "navigation.css";
+@import "scrollicon.css";
+@import "frontPage.css";
+@import "aboutPage.css";
+@import "skillsPage.css";
+@import "contactPage.css";
+
+
+
+/*!*general css*!*/
+
+:root {
+    font-size: 25px;
+    /*font-family: 'Roboto', sans-serif;*/
+    font-family: 'Source Code Pro', monospace;
+    --text-primary: #ffffff;
+    /*--text-primary: #000000;*/
+    --highlights: #00eeff;
+
+    /*--bg-primary: #262626;*/
+    --bg-primary: #0e1212;
+    --bg-secondary: #1c1c1c;
+    --bg-thirdly: #4d4d4d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /*background: linear-gradient(to right top, var(--bg-primary), var(--bg-secondary));*/
+    /*background: linear-gradient(to right top, #ffffff, #1f1f1f);*/
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    overflow-x: hidden;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--highlights);
+    font-size: 1.5em;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+.container{
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--text-primary);
+    width: 70%;
+    margin-top: 150px;
+
+    /*opacity: 0;*/
+    /*transition: 2s;*/
+}
+
+/*.about-page{*/
+/*    margin-top: 150px;*/
+/*    opacity: 0;*/
+/*    transition: 2s;*/
+/*}*/
+
+/*.skills-page {*/
+/*    margin-top: 150px;*/
+/*    opacity: 0;*/
+/*    transition: 2s;*/
+/*}*/
+
+/*.contact-page {*/
+/*    margin-top: 150px;*/
+/*    opacity: 0;*/
+/*    transition: 2s;*/
+/*}*/
+
+.show {
+    opacity: 1;
+}
+
+/*scroll bar*/
+body::-webkit-scrollbar {
+    width: 0.3rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--bg-thirdly);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--highlights);
+    border-radius: 1rem;
+}

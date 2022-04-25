@@ -1,0 +1,34 @@
+
+.codelayout {
+    padding-left: 150px;
+}
+
+.ico {
+    fill: white;
+    width: 50px;
+    height: 50px;
+    transition: ease-in 0.3s;
+}
+
+.ico:hover {
+    fill: var(--highlights);
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/*!*background dot design*!*/
+/*.background {*/
+/*    margin-top: 3%;*/
+/*    margin-left: 6%;*/
+/*    outline: purple solid 1px;*/
+/*    height: 70%;*/
+/*    width: 30%;*/
+/*    float: left;*/
+/*    position: absolute;*/
+/*    background-size: 100px 100px;*/
+/*    background-image: radial-gradient(var(--bg-thirdly) 6px, transparent 0);*/
+/*    background-position: center;*/
+/*}*/
