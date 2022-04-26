@@ -21,12 +21,6 @@
     --bg-secondary: #1c1c1c;
     --bg-thirdly: #4d4d4d;
 }
-
-/** {*/
-/*    margin: 0;*/
-/*    padding: 0;*/
-/*}*/
-
 html {
     scroll-behavior: smooth;
 }
@@ -46,32 +40,28 @@ body {
     -ms-animation: fadeIn 3s;
 }
 
-
-h1, h2, h3, h4, h5, h6 {
+h1 {
     color: var(--highlights);
-    font-size: 1.3em;
+    font-size: 1.7em;
 }
 
-h1 {
-    font-size: 2em;
+h2, h3, h4, h5, h6 {
+    color: var(--highlights);
+    font-size: 1em;
 }
 
 .container {
-    /*padding: 30px;*/
     margin-left: auto;
     margin-right: auto;
     color: var(--text-primary);
     width: 70%;
     margin-top: 100px;
-
-    /*opacity: 0;*/
-    /*transition: 2s;*/
 }
 
 
-.show {
-    opacity: 1;
-}
+/*.show {*/
+/*    opacity: 1;*/
+/*}*/
 
 /*scroll bar*/
 body::-webkit-scrollbar {

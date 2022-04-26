@@ -1,12 +1,14 @@
+.codeContainer {
+    width: 100%;
+}
 .codeInfo {
     margin-top: 20px;
     margin-bottom: 20px;
     white-space: nowrap;
-
 }
 
 .codeLayout {
-    padding-left: 130px;
+    padding-left: 100px;
 }
 
 .ico {
@@ -26,25 +28,10 @@ a {
 
 @media screen and (max-width: 410px) {
     .codeInfo {
-        font-size: 0.6rem;
-
+        font-size: 0.7rem;
     }
     .codeLayout {
         padding-left: 30px;
     }
 
 }
-
-/*!*background dot design*!*/
-/*.background {*/
-/*    margin-top: 3%;*/
-/*    margin-left: 6%;*/
-/*    outline: purple solid 1px;*/
-/*    height: 70%;*/
-/*    width: 30%;*/
-/*    float: left;*/
-/*    position: absolute;*/
-/*    background-size: 100px 100px;*/
-/*    background-image: radial-gradient(var(--bg-thirdly) 6px, transparent 0);*/
-/*    background-position: center;*/
-/*}*/
