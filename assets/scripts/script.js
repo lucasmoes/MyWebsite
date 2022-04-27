@@ -1,5 +1,3 @@
-// import age from './age.js';
-// import experiance from './experianceTime.js';
-//
-// age();
-// experiance();
+import './age.js';
+import './experianceTime.js';
+import './closeNav.js';
