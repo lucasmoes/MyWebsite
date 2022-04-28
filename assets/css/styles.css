@@ -5,13 +5,12 @@
 @import "skillsPage.css";
 @import "contactPage.css";
 @import "footer.css";
-
+@import "scrollMagic.css";
 
 /*!*general css*!*/
 
 :root {
     font-size: 25px;
-    /*font-family: 'Roboto', sans-serif;*/
     font-family: 'Source Code Pro', monospace;
     --text-primary: #ffffff;
     /*--text-primary: #000000;*/
