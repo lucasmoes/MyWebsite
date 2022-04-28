@@ -1,0 +1,23 @@
+body .ico {
+    fill: var(--text-primary);
+}
+
+.light-mode {
+    background: var(--bg-lighmode);
+    color: var(--text-lightmode);
+    text-decoration: none;
+    transition: 1s;
+}
+.light-mode #icon-linkedin  {
+    fill: var(--text-lightmode);
+}
+.light-mode #icon-github {
+    fill: var(--text-lightmode);
+}
+.light-mode #icon-linkedin:hover {
+    fill: var(--highlights);
+}
+
+.light-mode #icon-github:hover {
+    fill: var(--highlights);
+}

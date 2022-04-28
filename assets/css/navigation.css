@@ -106,18 +106,16 @@
     transform: translate(-100%, 0);
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
     backdrop-filter: blur(1rem);
-
 }
 
 #menu li {
     padding: 15px 0;
-    font-size: 2em;
+    font-size: 1.5em;
     /*font-weight: bold;*/
 }
 
 #menuToggle input:checked ~ ul {
     transform: none;
-
 }
 
 #modeToggle {
@@ -129,9 +127,6 @@
     display: flex;
     position: absolute;
     top: 97vh;
-    /*border: white solid 1px;*/
-
-
 }
 
 .icon {
