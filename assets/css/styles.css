@@ -5,19 +5,19 @@
 @import "skillsPage.css";
 @import "contactPage.css";
 @import "footer.css";
-
+@import "scrollMagic.css";
 
 /*!*general css*!*/
 
 :root {
     font-size: 25px;
-    /*font-family: 'Roboto', sans-serif;*/
     font-family: 'Source Code Pro', monospace;
     --text-primary: #ffffff;
-    /*--text-primary: #000000;*/
+    --text-lightmode: #000000;
+
     --highlights: #00eeff;
 
-    /*--bg-primary: #262626;*/
+    --bg-lighmode: #ffffff;
     --bg-primary: #0e1212;
     --bg-secondary: #1c1c1c;
     --bg-thirdly: #4d4d4d;
@@ -33,11 +33,20 @@ body {
     /*background: linear-gradient(to right top, #ffffff, #1f1f1f);*/
     background: var(--bg-primary);
     color: var(--text-primary);
+    fill: var(--text-primary);
     overflow-x: hidden;
-    animation: fadeIn 3s;
-    -webkit-animation: fadeIn 3s;
-    -moz-animation: fadeIn 3s;
-    -o-animation: fadeIn 3s;
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    text-decoration: none;
+}
+
+.light-mode {
+    background: var(--bg-lighmode);
+    color: var(--text-lightmode);
+    text-decoration: none;
+    fill: var(--text-lightmode);
 }
 
 h1 {
@@ -53,7 +62,6 @@ h2, h3, h4, h5, h6 {
 .container {
     margin-left: auto;
     margin-right: auto;
-    color: var(--text-primary);
     width: 70%;
     margin-top: 100px;
 }

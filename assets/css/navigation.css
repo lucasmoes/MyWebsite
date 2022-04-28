@@ -120,24 +120,20 @@
 
 }
 
+#modeToggle {
+    margin-left: 130px;
+}
 
-/*@media screen and (max-width: 480px) {*/
-/*    .navigation {*/
-/*        width: 1.7rem;*/
-/*    }*/
+.iconContainer {
+    fill: white;
+    display: flex;
+    position: absolute;
+    top: 97vh;
+    /*border: white solid 1px;*/
 
-/*    #menuToggle {*/
-/*        top: 10px;*/
-/*        left: 4px;*/
-/*    }*/
 
-/*    #menuToggle span {*/
-/*        width: 33px;*/
-/*        height: 4px;*/
-/*    }*/
+}
 
-/*    #menuToggle input {*/
-/*        width: 40px;*/
-/*        height: 32px;*/
-/*    }*/
-/*}*/
+.icon {
+    margin-right: 15px;
+}
