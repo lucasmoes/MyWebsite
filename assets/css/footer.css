@@ -1,13 +1,11 @@
-footer{
-    height: 25vh;
-    width: 100%;
-    background: var(--bg-secondary);
-    margin-top: 50px;
-}
-
 .footerContainer{
+    background: var(--bg-secondary);
     padding-top: 20px;
     text-align: center;
+    height: 20vh;
+    width: 100%;
+    margin-top: 50px;
+    color: var(--text-primary);
 }
 
 .footerLinks{
@@ -21,8 +19,7 @@ footer{
 .footerLinks a{
     margin-right: 50px;
     margin-left: 50px;
-    color: var(--text-secondary);
-    text-decoration: none;
+    color: var(--text-primary);
 }
 
 .footerLinks a:hover{
