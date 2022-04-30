@@ -8,16 +8,49 @@ body .ico {
     text-decoration: none;
     transition: 1s;
 }
-.light-mode #icon-linkedin  {
+
+.light-mode #icon-linkedin {
     fill: var(--text-lightmode);
 }
+
 .light-mode #icon-github {
     fill: var(--text-lightmode);
 }
+
 .light-mode #icon-linkedin:hover {
     fill: var(--highlights);
 }
 
 .light-mode #icon-github:hover {
     fill: var(--highlights);
+}
+
+.mode-notification {
+    background: var(--bg-thirdly);
+    color: white;
+    border-radius: 50px;
+    width: fit-content;
+    padding: 0 20px;
+    position: fixed;
+    top: 100vh;
+    right: 15px;
+    animation: MoveUpDown 2s;
+    opacity: 99%;
+    backdrop-filter: blur(1rem);
+}
+
+@keyframes MoveUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(-100px);
+    }
+    80% {
+        transform: translateY(-100px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+
 }
