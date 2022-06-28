@@ -35,7 +35,6 @@ body .ico {
     top: 100vh;
     right: 15px;
     animation: MoveUpDown 2s;
-    opacity: 99%;
     backdrop-filter: blur(1rem);
 }
 

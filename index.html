@@ -42,9 +42,13 @@
             <a href="#skills">
                 <li id="closeNavSkills">.skills()</li>
             </a>
+            <a href="#projects">
+                <li id="closeNavProjects">.projects()</li>
+            </a>
             <a href="#timeline">
                 <li id="closeNavTimeline">.timeline()</li>
             </a>
+
             <!--            <a href="#contact">-->
             <!--                <li id="closeNavContact">.contact()</li>-->
             <!--            </a>-->
@@ -85,7 +89,7 @@
     <div class="frontPage" id="home">
         <div class="title">
             <div>
-                <img src="assets/img/drawing.svg" alt="Lucas Moes Logo" id="logo">
+                <img src="assets/img/lmlogo.svg" alt="Lucas Moes Logo" id="logo">
             </div>
             <div>
                 <h1 class="lucasmoes">Lucas Moes</h1>
@@ -100,7 +104,7 @@
     <div class="about container" id="about">
         <h1>this.me()</h1>
         <div class="introText">
-            <a target="_blank" title="LinkedIn" href="pages/linkedin.html">
+            <a target="_blank" title="LinkedIn" href="pages/linkedin.html" class="no-underline">
                 <svg xmlns="http://www.w3.org/2000/svg"
                      id="icon-linkedin"
                      class="ico"
@@ -111,7 +115,7 @@
                 </svg>
             </a>
 
-            <a target="_blank" title="GitHub" href="pages/github.html">
+            <a target="_blank" title="GitHub" href="pages/github.html" class="no-underline">
                 <svg xmlns="http://www.w3.org/2000/svg"
                      id="icon-github"
                      class="ico"
@@ -121,7 +125,7 @@
                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                 </svg>
             </a>
-            <!--                            <a target="_blank" title="Twitter" onclick="redirectTwitter()">-->
+            <!--                            <a target="_blank" title="Twitter" onclick="redirectTwitter()" class="no-underline">-->
             <!--                    <svg xmlns="http://www.w3.org/2000/svg"-->
             <!--                         viewBox="0 0 24 24"-->
             <!--                         class="ico"-->
@@ -189,6 +193,7 @@
                     <p id="htmlYears">HTML</p>
                     <p id="cssYears">CSS</p>
                     <p id="javascriptYears">JavaScript</p>
+                    <p id="csharpYears">C#</p>
                     <p id="sqlYears">SQL</p>
                     <p id="postgresqlYears">Postgresql</p>
 
@@ -200,6 +205,7 @@
                     <p id="npmYears">NPM</p>
                     <p id="litYears">Lit Element</p>
                     <p id="junitYear">Junit Testing</p>
+                    <p id="netYears">.NET</p>
                 </div>
                 <div>
                     <p id="githubYears">GitHub</p>
@@ -245,6 +251,174 @@
         </div>
 
     </div>
+    <div class="projects container" id="projects">
+        <h1>this.projects()</h1>
+
+        <div class="projectLists">
+
+
+            <div class="projectContainer">
+                <h2>Car Size Checker</h2>
+                <p>Made an iframe that checks if the car fits in the car wash.</p>
+                <div class="listIcons">
+                    <div class="listProjectRelationIcons">
+                        <div class="projectRelationIcon">
+                            <a target="_blank" title="Berkman" href="https://www.berkman.nl/">
+                                <img class="projectLogos" src="assets/img/berkmanlogo.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="projectContainer">
+                <h2>Tetris</h2>
+                <p>For school project made Tetris in C# .NET including single player and online multiplayer.</p>
+                <div class="listIcons">
+                    <div class="listProjectRelationIcons">
+                        <div class="projectRelationIcon">
+                            <a target="_blank" title="Hogeschool Utrecht" href="https://www.hu.nl/">
+                                <img class="projectLogos" src="assets/img/hu.svg">
+                            </a>
+                        </div>
+                        <!--                        <div class="projectRelationIcon">-->
+                        <!--                            <a target="_blank" title="GitHub" href="https://github.com/lucasmoes/Tetris">-->
+                        <!--                                <svg xmlns="http://www.w3.org/2000/svg"-->
+                        <!--                                     class="ico projectLogos"-->
+                        <!--                                     viewBox="0 0 24 24"-->
+                        <!--                                     role="img"-->
+                        <!--                                     aria-labelledby="GitHub">-->
+                        <!--                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>-->
+                        <!--                                </svg>-->
+
+                        <!--                            </a>-->
+                        <!--                        </div>-->
+                    </div>
+                </div>
+            </div>
+            <div class="projectContainer">
+                <h2>UMC Utrecht WKZ</h2>
+                <p>For school group project made a website in C# with a CMS.</p>
+                <div class="listIcons">
+                    <div class="listProjectRelationIcons">
+                        <div class="projectRelationIcon">
+                            <a target="_blank" title="Hogeschool Utrecht" href="https://www.hu.nl/">
+                                <img class="projectLogos" src="assets/img/hu.svg">
+                            </a>
+                        </div>
+                        <div class="projectRelationIcon">
+                            <a target="_blank" title="UMC" href="https://www.umcutrecht.nl/nl">
+                                <img class="projectLogos" src="assets/img/umcUtrechtLogo.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="projectContainer">
+                <h2>Lingo</h2>
+                <p>For school project made a lingo API with java and spring boot in test driven development way.</p>
+                <div class="listIcons">
+                    <div class="listProjectRelationIcons">
+                        <div class="projectRelationIcon">
+                            <a target="_blank" title="Hogeschool Utrecht" href="https://www.hu.nl/">
+                                <img class="projectLogos" src="assets/img/hu.svg">
+                            </a>
+                        </div>
+                        <div class="projectRelationIcon">
+                            <a target="_blank" title="GitHub" href="https://github.com/lucasmoes/LingoTrainer">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                     class="ico projectLogos"
+                                     viewBox="0 0 24 24"
+                                     role="img"
+                                     aria-labelledby="GitHub">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="projectContainer">
+                <h2>Black Jack</h2>
+                <p>For school project made a black jack API in java and spring boot.</p>
+                <div class="listIcons">
+                    <div class="listProjectRelationIcons">
+                        <div class="projectRelationIcon">
+                            <a target="_blank" title="Hogeschool Utrecht" href="https://www.hu.nl/">
+                                <img class="projectLogos" src="assets/img/hu.svg">
+                            </a>
+                        </div>
+                        <!--                        <div class="projectRelationIcon">-->
+                        <!--                            <a target="_blank" title="GitHub" href="https://github.com/lucasmoes/BlackJack">-->
+                        <!--                                <svg xmlns="http://www.w3.org/2000/svg"-->
+                        <!--                                     class="ico projectLogos"-->
+                        <!--                                     viewBox="0 0 24 24"-->
+                        <!--                                     role="img"-->
+                        <!--                                     aria-labelledby="GitHub">-->
+                        <!--                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>-->
+                        <!--                                </svg>-->
+
+                        <!--                            </a>-->
+                        <!--                        </div>-->
+                    </div>
+                </div>
+            </div>
+            <div class="projectContainer">
+                <h2>Steam Project</h2>
+                <p>For school project made a dashboard in python you can see: online friends, game stats, recommended
+                    games to play, planner.</p>
+                <div class="listIcons">
+                    <div class="listProjectRelationIcons">
+                        <div class="projectRelationIcon">
+                            <a target="_blank" title="Hogeschool Utrecht" href="https://www.hu.nl/">
+                                <img class="projectLogos" src="assets/img/hu.svg">
+                            </a>
+                        </div>
+                        <!--                    <div class="projectRelationIcon">-->
+                        <!--                        <a target="_blank" title="GitHub" href="">-->
+                        <!--                            <svg xmlns="http://www.w3.org/2000/svg"-->
+                        <!--                                 class="ico projectLogos"-->
+                        <!--                                 viewBox="0 0 24 24"-->
+                        <!--                                 role="img"-->
+                        <!--                                 aria-labelledby="GitHub">-->
+                        <!--                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>-->
+                        <!--                            </svg>-->
+
+                        <!--                        </a>-->
+                        <!--                    </div>-->
+                    </div>
+                </div>
+            </div>
+            <div class="projectContainer">
+                <h2>NS Project</h2>
+                <p>For school project made system in python where a traveller can leave a message and will be posted on
+                    Twitter with admin panel for moderation.</p>
+                <div class="listIcons">
+                    <div class="listProjectRelationIcons">
+                        <div class="projectRelationIcon">
+                            <a target="_blank" title="Hogeschool Utrecht" href="https://www.hu.nl/">
+                                <img class="projectLogos" src="assets/img/hu.svg">
+                            </a>
+                        </div>
+                        <!--                    <div class="projectRelationIcon">-->
+                        <!--                        <a target="_blank" title="GitHub" href="">-->
+                        <!--                            <svg xmlns="http://www.w3.org/2000/svg"-->
+                        <!--                                 class="ico projectLogos"-->
+                        <!--                                 viewBox="0 0 24 24"-->
+                        <!--                                 role="img"-->
+                        <!--                                 aria-labelledby="GitHub">-->
+                        <!--                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>-->
+                        <!--                            </svg>-->
+
+                        <!--                        </a>-->
+                        <!--                    </div>-->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
 
     <div class="tline container" id="timeline">
         <h1>this.timeline()</h1>
@@ -252,7 +426,10 @@
 
             <ul class="timeline">
                 <li class="event" data-date="2022">
-
+                    <h3>First Software Development Job</h3>
+                    <p>Started my first software development job part-time at <a
+                            href="https://www.berkman.nl/">Berkman</a></p>
+                    <p class="miniDate">24-03-2022</p>
                 </li>
                 <li class="event" data-date="2021">
                     <h3>Continuing Software Development</h3>
@@ -269,7 +446,7 @@
                     <p class="miniDate">01-02-2021</p>
                 </li>
                 <li class="event" data-date="2020">
-                    <h3>Starting My ICT Carrier</h3>
+                    <h3>Starting my ICT carrier</h3>
                     <p>Started studying ICT, which included AI, Programming, BIM, TI, CSC, to get a taste of a
                         few
                         areas in the ICT world</p>
@@ -278,6 +455,8 @@
             </ul>
         </div>
     </div>
+
+
 
     <!--    <div class="contact container" id="contact">-->
     <!--        <h1>this.contact()</h1>-->
@@ -288,16 +467,19 @@
     <div class="footerContainer">
         <div class="footerLinks">
             <div>
-                <a href="#home">Home</a>
+                <a href="#home" class="no-underline">Home</a>
             </div>
             <div>
-                <a href="#about">About</a>
+                <a href="#about" class="no-underline">About</a>
             </div>
             <div>
-                <a href="#skills">Skills</a>
+                <a href="#skills" class="no-underline">Skills</a>
             </div>
             <div>
-                <a href="#timeline">Timeline</a>
+                <a href="#timeline" class="no-underline">Timeline</a>
+            </div>
+            <div>
+                <a href="#projects" class="no-underline">Projects</a>
             </div>
             <!--            <div>-->
             <!--                <a href="#contact">Contact</a>-->

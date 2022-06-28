@@ -8,6 +8,7 @@
 @import "footer.css";
 @import "scrollMagic.css";
 @import "lightdarkmode.css";
+@import "projects.css";
 
 /*!*general css*!*/
 
@@ -60,6 +61,15 @@ h2, h3, h4, h5, h6 {
     margin-top: 100px;
 }
 
+.no-underline {
+    text-decoration: none;
+}
+
+
+a{
+    text-decoration: underline;
+    color: var(--highlights);
+}
 
 
 

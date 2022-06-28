@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="no"?>
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     class="ico"
+     viewBox="0 0 34 30"
+     role="img"
+     aria-labelledby="Hogeschool Utrecht">
+    <path d="M9.757.18h4.82v12.39h-4.82zm0 17.348h4.82V29.92h-4.82zM.12.18h4.82v29.74H.12z"
+          fill="#1A9FD9"/>
+    <path d="M33.86 15.05V.18h-4.82v14.87c0 1.37-1.084 2.48-2.41 2.48-1.336 0-2.41-1.11-2.41-2.48V.18h-4.822l-.002 14.87c0 4.116 3.233 7.436 7.233 7.436 4 0 7.23-3.32 7.23-7.436z"
+          fill="#E62F2B"/>
+</svg>

@@ -21,3 +21,11 @@ var timelineScene = new ScrollMagic.Scene({
 })
     .setClassToggle('.tline', 'show')
     .addTo(controller);
+
+
+var projectsScene = new ScrollMagic.Scene({
+    triggerElement: '.projects',
+    triggerHook: 0.8,
+})
+    .setClassToggle('.projects', 'show')
+    .addTo(controller);

@@ -2,7 +2,7 @@
 .frontPage {
     width: 100vw;
     height: 100vh;
-    background-image: url("../../assets/img/mountainNew.jpg");
+    background-image: url("../img/mountain.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -21,10 +21,8 @@
 
 #logo {
     z-index: 98;
-    max-height: 60vh;
-    max-width: 60vw;
-    /*margin-left: 50%;*/
-    /*transform: translateX(-50%);*/
+    max-height: 40vh;
+    max-width: 40vw;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -48,8 +46,6 @@
     max-font-size: 2rem;
     text-align: center;
     white-space: nowrap;
-
-    text-align: center;
     margin-top: -30px;
 }
 
