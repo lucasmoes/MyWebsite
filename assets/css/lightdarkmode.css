@@ -8,6 +8,16 @@ body .ico {
     text-decoration: none;
     transition: 1s;
 }
+.light-mode .projectContainer {
+    background: var(--bg-lighmode);
+    color: var(--text-lightmode);
+    border: var(--bg-primary) 1px solid;);
+}
+.light-mode .tech {
+    background-color: var(--bg-lighmode);
+    color: var(--text-lightmode);
+    border: var(--bg-primary) 1px solid;);
+}
 
 .light-mode #icon-linkedin {
     fill: var(--text-lightmode);

@@ -16,6 +16,7 @@ document.getElementById("htmlYears").innerText = "HTML / " + getYearsWithData(20
 document.getElementById("cssYears").innerText = "CSS / " + getYearsWithData(2020, 1, 12);
 document.getElementById("javascriptYears").innerText = "JavaScript / " + getYearsWithData(2021, 4, 1);
 document.getElementById("netYears").innerText = ".NET / " + getYearsWithData(2022, 3, 1);
+document.getElementById("cPYears").innerText = "Chrome Plugin / " + getYearsWithData(2022, 9, 5);
 document.getElementById("csharpYears").innerText = "C# / " + getYearsWithData(2022, 3, 1);
 document.getElementById("sqlYears").innerText = "SQL / " + getYearsWithData(2017, 7, 1);
 document.getElementById("postgresqlYears").innerText = "Postgresql / " + getYearsWithData(2020, 8, 1);
