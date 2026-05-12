@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucas Moes</title>
-    <meta name="description" content="Lucas Moes personal website">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="shortcut icon" href="/assets/img/lmlogo.svg">
+    <title>Lucas Moes | Software Engineer</title>
+    <meta name="description" content="Lucas Moes - Software Engineer">
+    <link rel="icon" href="assets/LM_logo.ico">
+    <link rel="stylesheet" href="styles.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y3KCEHEFW6"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -20,489 +19,410 @@
 
         gtag('config', 'G-Y3KCEHEFW6');
     </script>
-    <script async type="module" src="assets/scripts/script.js"></script>
 </head>
-
 <body>
-    <nav role="navigation" class="navigation">
-        <div id="menuToggle">
+<div class="blob" aria-hidden="true"></div>
 
-            <input type="checkbox" id="navbar" />
-            <span></span>
-            <span></span>
-            <span></span>
+<div class="nav-burger" id="navBurger">
+    <!-- Hamburger icon -->
+    <button class="burger-icon" id="burgerBtn" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 
-            <ul id="menu">
-                <a href="#home">
-                    <li id="closeNavHome">.home()</li>
-                </a>
-                <a href="#about">
-                    <li id="closeNavAbout">.about()</li>
-                </a>
-                <a href="#skills">
-                    <li id="closeNavSkills">.skills()</li>
-                </a>
-                <a href="#projects">
-                    <li id="closeNavProjects">.projects()</li>
-                </a>
-                <a href="#timeline">
-                    <li id="closeNavTimeline">.timeline()</li>
-                </a>
+    <!-- Slide-out menu panel -->
+    <nav class="burger-menu" aria-label="Main">
+        <a href="#home">Home</a>
+        <a href="#career">Career</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#certifications">Certifications</a>
+        <span class="menu-sep" aria-hidden="true">|</span>
+        <button id="themeToggle" class="mode-toggle" aria-label="Toggle dark and light mode">
+            <!-- Sun: shown in dark mode, click → go light -->
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="5"/>
+                <line x1="12" y1="1" x2="12" y2="3"/>
+                <line x1="12" y1="21" x2="12" y2="23"/>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                <line x1="1" y1="12" x2="3" y2="12"/>
+                <line x1="21" y1="12" x2="23" y2="12"/>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+            <!-- Moon: shown in light mode, click → go dark -->
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+        </button>
+    </nav>
+</div>
 
-                <!--            <a href="#contact">-->
-                <!--                <li id="closeNavContact">.contact()</li>-->
-                <!--            </a>-->
-                <div class="iconContainer">
-
-                    <div class="icon">
-                        <a target="_blank" title="LinkedIn" href="pages/linkedin.html">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="ico" viewBox="0 0 24 24" role="img" aria-labelledby="LinkedIn">
-                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+<main class="page">
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-left">
+                <img class="hero-logo" src="assets/lmlogo.svg" alt="Lucas Moes logo">
+                <h1 class="name">Lucas Moes</h1>
+                <p class="role">Software Engineer</p>
+                <div class="socials" aria-label="Social links">
+                    <a class="social-icon" href="pages/github.html" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.48 11.48 0 0 1 12 6.844c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.431.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.798 24 17.302 24 12c0-6.627-5.373-12-12-12z"/>
                         </svg>
+                    </a>
+                    <a class="social-icon" href="pages/linkedin.html" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M19 0h-14C2.239 0 0 2.239 0 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5V5c0-2.761-2.238-5-5-5zM8 19H5V8h3v11zM6.5 6.732A1.764 1.764 0 1 1 6.5 3.204a1.764 1.764 0 0 1 0 3.528zM20 19h-3v-5.604c0-3.368-4-3.113-4 0V19h-3V8h3v1.765c1.396-2.586 7-2.777 7 2.476V19z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <aside class="hero-json-card" aria-label="Profile JSON">
+<pre class="hero-json">{
+  "name": "Lucas Moes",
+  "role": "Software Engineer",
+  "location": "Utrecht, Netherlands",
+  "current-company": "ICT TriOpSys",
+  "topSkills": [
+    "Software Development",
+    "Java"
+    "Web Development",
+  ],
+  "languages": ["English", "Dutch"],
+  "contact": {
+    "linkedin": "lucas-moes",
+    "github": "lucasmoes"
+  }
+}</pre>
+            </aside>
+        </div>
+    </section>
+
+    <section id="career">
+        <h2 class="section-title">Career</h2>
+        <p class="section-subtitle">A full overview of my professional experience, from internships to current role.</p>
+
+        <div class="card-grid">
+            <article class="card">
+                <div class="card-head">
+                    <h3 class="card-title">Software Engineer | ICT TriOpSys</h3>
+                    <a class="logo-link" href="https://www.ict.eu/" target="_blank" rel="noopener noreferrer" aria-label="ICT TriOpSys website">
+                        <img class="company-logo" src="assets/ICT%20TriOpSys.png" alt="ICT TriOpSys logo">
+                    </a>
+                </div>
+                <p class="card-date">Feb 2026 - Present | Woerden</p>
+                <p>Software engineer working on projects for clients</p>
+            </article>
+
+            <article class="card">
+                <div class="card-head">
+                    <h3 class="card-title">Software Engineer | ProRail (via Sopra Steria)</h3>
+                    <div class="card-logos-group">
+                        <a class="logo-link" href="https://www.soprasteria.com/" target="_blank" rel="noopener noreferrer" aria-label="Sopra Steria website">
+                            <img class="company-logo" src="assets/soprasteria.png" alt="Sopra Steria logo">
+                        </a>
+                        <a class="logo-link" href="https://www.prorail.nl/" target="_blank" rel="noopener noreferrer" aria-label="ProRail website">
+                            <img class="company-logo" src="assets/prorail.svg" alt="ProRail logo">
                         </a>
                     </div>
-                    <div class="icon">
-                        <a target="_blank" title="GitHub" href="pages/github.html">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="ico" viewBox="0 0 24 24" role="img" aria-labelledby="GitHub">
+                </div>
+                <p class="card-date">Feb 2025 - Jan 2026 | Nieuwegein & Utrecht</p>
+                <p>Started with a traineeship at Sopra Steria in February, then transitioned to Software Engineer role at client ProRail in May. Contributed to the Trinity simulation project — a sophisticated environment replicating official Train Traffic Controller software for training and R&D purposes. Built new modules in the Java backend and React frontend to support realistic train scenarios and give instructors and testers greater control during training sessions. Actively improved quality through code reviews, test support, and release pipeline optimization, enabling rapid and reliable feature delivery.</p>
+            </article>
+
+            <article class="card">
+                <div class="card-head">
+                    <h3 class="card-title">Software Developer Intern | AFAS Software</h3>
+                    <a class="logo-link" href="https://www.afas.nl/" target="_blank" rel="noopener noreferrer" aria-label="AFAS Software website">
+                        <img class="company-logo" src="assets/afas.svg" alt="Afas logo">
+                    </a>
+                </div>
+                <p class="card-date">Feb 2024 - Jun 2024 | Leusden</p>
+                <p>Developed a web editor for AFAS to accelerate and simplify the development process of their tax software in response to legislative changes.</p>
+            </article>
+
+            <article class="card">
+                <div class="card-head">
+                    <h3 class="card-title">Software Developer | Berkman Energie Service</h3>
+                    <a class="logo-link" href="https://www.berkman.nl/" target="_blank" rel="noopener noreferrer" aria-label="Berkman website">
+                        <img class="company-logo" src="assets/berkmanlogo.png" alt="Berkman logo">
+                    </a>
+                </div>
+                <p class="card-date">Mar 2022 - Mar 2024 | Barendrecht</p>
+                <p>Developed a program allowing customers to enter their license plate number to check if their car fits in the car wash. Created an interactive map enabling customers to locate Washboxes and tire pumps. Implemented small software solutions to simplify day-to-day operations.</p>
+            </article>
+
+            <article class="card">
+                <div class="card-head">
+                    <h3 class="card-title">Intern Corporate IT | Mploy Associates</h3>
+                    <a class="logo-link" href="https://www.mployassociates.com/" target="_blank" rel="noopener noreferrer" aria-label="Mploy Associates website">
+                        <img class="company-logo" src="assets/mploylogo.png" alt="Mploy Associates logo">
+                    </a>
+                </div>
+                <p class="card-date">Sep 2022 - Jan 2023 | Utrecht</p>
+                <p>Independently developed, implemented, and managed a complete Chrome plug-in that allows recruiters to save LinkedIn profiles with specific data into a database.</p>
+            </article>
+
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle">A selection of projects from work, internships, school, and freelance work.</p>
+        <div class="card-grid">
+            <article class="card">
+                <h3 class="card-title">Trinity Simulation Project</h3>
+                <p class="card-date">Client Project · ProRail (via Sopra Steria)</p>
+                <p>Contributed to Trinity, a sophisticated simulation environment replicating official Train Traffic Controller software for training purposes. Built new modules in the Java backend and React frontend to support realistic train scenarios. Implemented features that give instructors greater control during training sessions.</p>
+                <div class="project-logos">
+                    <a href="https://www.prorail.nl/" target="_blank" rel="noopener noreferrer" aria-label="ProRail">
+                        <img src="assets/prorail.svg" alt="ProRail" class="project-logo-img">
+                    </a>
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-badge">Java</span>
+                    <span class="tech-badge">React</span>
+                    <span class="tech-badge">Spring Boot</span>
+                    <span class="tech-badge">H2 Database</span>
+                    <span class="tech-badge">Code Reviews</span>
+                    <span class="tech-badge">Agile</span>
+                </div>
+            </article>
+
+            <article class="card">
+                <h3 class="card-title">AFAS Web Editor</h3>
+                <p class="card-date">Internship · AFAS Software</p>
+                <p>Developed a web-based editor to accelerate and simplify the development process of AFAS tax software in response to legislative changes. Built an intuitive interface for configuring tax rules and parameters.</p>
+                <div class="project-logos">
+                    <a href="https://www.afas.nl/" target="_blank" rel="noopener noreferrer" aria-label="AFAS Software">
+                        <img src="assets/afas.svg" alt="AFAS" class="project-logo-img">
+                    </a>
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-badge">HTML</span>
+                    <span class="tech-badge">JavaScript</span>
+                    <span class="tech-badge">CSS</span>
+                </div>
+            </article>
+
+
+            <article class="card">
+                <h3 class="card-title">Berkman Location Map</h3>
+                <p class="card-date">Client · Berkman Energie Service</p>
+                <p>Created an interactive map enabling customers to locate Washboxes and tire pumps across different locations. Integrated with backend services to display real-time availability and directions.</p>
+                <div class="project-logos">
+                    <a href="https://www.berkman.nl/" target="_blank" rel="noopener noreferrer" aria-label="Berkman Energie Service">
+                        <img src="assets/berkmanlogo.png" alt="Berkman" class="project-logo-img">
+                    </a>
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-badge">JavaScript</span>
+                    <span class="tech-badge">Google Maps API</span>
+                    <span class="tech-badge">HTML</span>
+                    <span class="tech-badge">CSS</span>
+                </div>
+            </article>
+
+            <article class="card">
+                <h3 class="card-title">LinkedIn Plugin</h3>
+                <p class="card-date">Internship · Mploy Associates</p>
+                <p>Built a Chrome plug-in for recruiters to save LinkedIn profiles with specific data into a database, independently developed end-to-end during my internship.</p>
+                <div class="project-logos">
+                    <a href="https://www.mployassociates.com/" target="_blank" rel="noopener noreferrer" aria-label="Mploy Associates">
+                        <img src="assets/mploylogo.png" alt="Mploy Associates" class="project-logo-img">
+                    </a>
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-badge">HTML</span>
+                    <span class="tech-badge">CSS</span>
+                    <span class="tech-badge">JavaScript</span>
+                    <span class="tech-badge">Chrome Plugin</span>
+                </div>
+            </article>
+
+            <article class="card">
+                <h3 class="card-title">Car Size Checker</h3>
+                <p class="card-date">Client · Berkman Energie Service</p>
+                <p>Developed an iframe that allows customers to enter their license plate number to check whether their car fits in the car wash.</p>
+                <div class="project-logos">
+                    <a href="https://www.berkman.nl/" target="_blank" rel="noopener noreferrer" aria-label="Berkman Energie Service">
+                        <img src="assets/berkmanlogo.png" alt="Berkman" class="project-logo-img">
+                    </a>
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-badge">JavaScript</span>
+                    <span class="tech-badge">HTML</span>
+                    <span class="tech-badge">CSS</span>
+                </div>
+            </article>
+
+            <article class="card">
+                <h3 class="card-title">Tetris</h3>
+                <p class="card-date">School · Hogeschool Utrecht</p>
+                <p>Built a Tetris game featuring both single-player mode and online multiplayer, developed as a school project.</p>
+                <div class="project-logos">
+                    <a href="https://www.hu.nl/" target="_blank" rel="noopener noreferrer" aria-label="Hogeschool Utrecht">
+                        <img src="assets/hu.svg" alt="Hogeschool Utrecht" class="project-logo-img">
+                    </a>
+                    <a href="https://github.com/lucasmoes/Tetris" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
+                        <svg class="project-logo-svg" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                         </svg>
-                        </a>
-                    </div>
-                    <div id="modeToggle" class="icon">
-                        <!--                image imported with js-->
-                    </div>
+                    </a>
                 </div>
+                <div class="tech-stack">
+                    <span class="tech-badge">C#</span>
+                    <span class="tech-badge">.NET</span>
+                </div>
+            </article>
 
-            </ul>
+            <article class="card">
+                <h3 class="card-title">UMC Utrecht WKZ</h3>
+                <p class="card-date">Group project · Hogeschool Utrecht</p>
+                <p>Rebuilt the UMC Utrecht WKZ website to match their technological standards as part of a school group project.</p>
+                <div class="project-logos">
+                    <a href="https://www.hu.nl/" target="_blank" rel="noopener noreferrer" aria-label="Hogeschool Utrecht">
+                        <img src="assets/hu.svg" alt="Hogeschool Utrecht" class="project-logo-img">
+                    </a>
+                    <a href="https://www.umcutrecht.nl/nl" target="_blank" rel="noopener noreferrer" aria-label="UMC Utrecht">
+                        <img src="assets/umcUtrechtLogo.png" alt="UMC Utrecht" class="project-logo-img">
+                    </a>
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-badge">C#</span>
+                    <span class="tech-badge">.NET</span>
+                    <span class="tech-badge">CMS</span>
+                </div>
+            </article>
 
+            <article class="card">
+                <h3 class="card-title">Lingo API</h3>
+                <p class="card-date">School · Hogeschool Utrecht</p>
+                <p>Developed a Lingo game API using a test-driven development methodology, including CI integration.</p>
+                <div class="project-logos">
+                    <a href="https://www.hu.nl/" target="_blank" rel="noopener noreferrer" aria-label="Hogeschool Utrecht">
+                        <img src="assets/hu.svg" alt="Hogeschool Utrecht" class="project-logo-img">
+                    </a>
+                    <a href="https://github.com/lucasmoes/LingoTrainer" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
+                        <svg class="project-logo-svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-badge">Java</span>
+                    <span class="tech-badge">Spring Boot</span>
+                    <span class="tech-badge">PostgreSQL</span>
+                    <span class="tech-badge">JUnit</span>
+                    <span class="tech-badge">CI</span>
+                </div>
+            </article>
+
+            <article class="card">
+                <h3 class="card-title">Black Jack</h3>
+                <p class="card-date">School · Hogeschool Utrecht</p>
+                <p>Built a Black Jack API as part of a school project using Java, Spring Boot, Hibernate, and PostgreSQL.</p>
+                <div class="project-logos">
+                    <a href="https://www.hu.nl/" target="_blank" rel="noopener noreferrer" aria-label="Hogeschool Utrecht">
+                        <img src="assets/hu.svg" alt="Hogeschool Utrecht" class="project-logo-img">
+                    </a>
+                    <a href="https://github.com/lucasmoes/Casino" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
+                        <svg class="project-logo-svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-badge">Java</span>
+                    <span class="tech-badge">Spring Boot</span>
+                    <span class="tech-badge">Hibernate</span>
+                    <span class="tech-badge">PostgreSQL</span>
+                </div>
+            </article>
+
+            <article class="card">
+                <h3 class="card-title">Steam Dashboard</h3>
+                <p class="card-date">Group project · Hogeschool Utrecht</p>
+                <p>Created a dashboard showing online friends, game stats, recommended games, and a planner as a group school project built with Python.</p>
+                <div class="project-logos">
+                    <a href="https://www.hu.nl/" target="_blank" rel="noopener noreferrer" aria-label="Hogeschool Utrecht">
+                        <img src="assets/hu.svg" alt="Hogeschool Utrecht" class="project-logo-img">
+                    </a>
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-badge">Python</span>
+                </div>
+            </article>
+
+            <article class="card">
+                <h3 class="card-title">NS Project</h3>
+                <p class="card-date">Group project · Hogeschool Utrecht</p>
+                <p>Built a system where travelers can leave a message that gets posted on Twitter, with an admin panel for moderation, developed as a school project.</p>
+                <div class="project-logos">
+                    <a href="https://www.hu.nl/" target="_blank" rel="noopener noreferrer" aria-label="Hogeschool Utrecht">
+                        <img src="assets/hu.svg" alt="Hogeschool Utrecht" class="project-logo-img">
+                    </a>
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-badge">JavaScript</span>
+                    <span class="tech-badge">Node.js</span>
+                </div>
+            </article>
         </div>
-    </nav>
-    <main id="main">
-        <div class="frontPage" id="home">
-            <div class="title">
-                <div>
-                    <img src="assets/img/lmlogo.svg" alt="Lucas Moes Logo" id="logo">
-                </div>
-                <div>
-                    <h1 class="lucasmoes">Lucas Moes</h1>
-                </div>
-                <div>
-                    <h2 class="softwareDeveloper">Software Developer</h2>
-                </div>
-            </div>
-            <div class='icon-scroll'></div>
+    </section>
+
+    <section id="education">
+        <h2 class="section-title">Education</h2>
+        <p class="section-subtitle">My academic background from secondary school through university.</p>
+
+        <div class="card-grid">
+            <article class="card">
+                <h3 class="card-title">Bachelor's Degree, Software Development</h3>
+                <p class="card-date">Sep 2020 - Jun 2024 | Utrecht University of Applied Sciences</p>
+                <p>Four-year applied sciences degree covering software engineering, project work, and two internships in a professional software development context.</p>
+            </article>
+
+            <article class="card">
+                <h3 class="card-title">BTECH, Business and ICT</h3>
+                <p class="card-date">Sep 2018 - Jul 2019 | British School of Bahrain (Sixth Form)</p>
+            </article>
+
+            <article class="card">
+                <h3 class="card-title">IGCSE</h3>
+                <p class="card-date">Sep 2016 - Jul 2018 | British School of Bahrain</p>
+            </article>
         </div>
+    </section>
 
-        <div class="about container" id="about">
-            <h1>this.me()</h1>
-            <div class="introText">
-                <a target="_blank" title="LinkedIn" href="pages/linkedin.html" class="no-underline">
-                    <svg xmlns="http://www.w3.org/2000/svg" id="icon-linkedin" class="ico" viewBox="0 0 24 24" role="img" aria-labelledby="LinkedIn">
-                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                </svg>
-                </a>
+    <section id="certifications">
+        <h2 class="section-title">Certifications</h2>
+        <p class="section-subtitle">Professional certifications and awards.</p>
 
-                <a target="_blank" title="GitHub" href="pages/github.html" class="no-underline">
-                    <svg xmlns="http://www.w3.org/2000/svg" id="icon-github" class="ico" viewBox="0 0 24 24" role="img" aria-labelledby="GitHub">
-                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                </svg>
-                </a>
-                <!--                            <a target="_blank" title="Twitter" onclick="redirectTwitter()" class="no-underline">-->
-                <!--                    <svg xmlns="http://www.w3.org/2000/svg"-->
-                <!--                         viewBox="0 0 24 24"-->
-                <!--                         class="ico"-->
-                <!--                         role="img"-->
-                <!--                         aria-labelledby="Twitter">>-->
-                <!--                        <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>-->
-                <!--                    </svg>-->
-                <!--                </a>-->
-                <div class="codeContainer">
-                    <div class="codeInfo">
-                        <p>var lucas = {</p>
-                        <p class="codeLayout">name: "Lucas Moes",</p>
-                        <p class="codeLayout" id="myAge">date: "2001/09/17"</p>
-                        <p class="codeLayout">nationality: "Dutch",</p>
-                        <p class="codeLayout">based: "The Netherlands",</p>
-                        <p class="codeLayout">profession: "Software Developer"</p>
-                        <p>};</p>
-                    </div>
-                </div>
+        <div class="card-grid">
+            <article class="card">
+                <h3 class="card-title">Professional Scrum Master I (PSM I)</h3>
+            </article>
 
-                <div>
-                    <!--                    image of myself-->
-                </div>
-            </div>
+            <article class="card">
+                <h3 class="card-title">Microsoft Certified: Azure Fundamentals</h3>
+            </article>
 
-            <div>
-                <p>I am a software developer(Student) from the Netherlands, based in Utrecht, interested in learning and obtaining more skills every day. I strive to produce front and backend software and solutions of the highest quality.</p>
-            </div>
+            <article class="card">
+                <h3 class="card-title">Duke of Edinburgh's Silver Award</h3>
+            </article>
         </div>
+    </section>
 
-        <div class="skills container" id="skills">
-            <h1>this.skills()</h1>
-
-            <div class="aboutMoreInfo">
-                <h2>Main skills</h2>
-                <hr>
-                <div class="mainSkills gap">
-                    <div>
-                        <p>Software Development</p>
-                        <!--                    <p>Database Design</p>-->
-                    </div>
-                    <div>
-                        <p>Java</p>
-                        <p>Python</p>
-                    </div>
-                    <div>
-                        <p>JavaScript</p>
-                        <p>HTML</p>
-                        <p>CSS</p>
-                    </div>
-                    <div>
-                        <p>SQL</p>
-                        <p>Postgresql</p>
-                    </div>
-
-                </div>
-                <h2>Tools/years</h2>
-                <hr>
-                <div class="toolsyears gap">
-                    <div>
-                        <p id="javaYears">Java</p>
-                        <p id="pythonYears">Python</p>
-                        <p id="htmlYears">HTML</p>
-                        <p id="cssYears">CSS</p>
-                        <p id="javascriptYears">JavaScript</p>
-                        <p id="csharpYears">C#</p>
-                        <p id="sqlYears">SQL</p>
-                        <p id="postgresqlYears">Postgresql</p>
-
-                    </div>
-                    <div>
-                        <p id="springBootYears">Spring Boot</p>
-                        <p id="nodeYears">Node.js</p>
-                        <p id="hibernateYears">Hibernate</p>
-                        <p id="npmYears">NPM</p>
-                        <p id="litYears">Lit Element</p>
-                        <p id="junitYear">Junit Testing</p>
-                        <p id="netYears">.NET</p>
-                        <p id="cPYears">Chrome Plugin</p>
-                    </div>
-                    <div>
-                        <p id="githubYears">GitHub</p>
-                        <p id="herokuYears">Heroku</p>
-                        <p id="postmanYears">Postman</p>
-                        <p id="umlYears">UML</p>
-                        <p id="vpYears">Visual Paradigm</p>
-                    </div>
-                    <div>
-                        <p>Word</p>
-                        <p>Excel</p>
-                        <p>Powerpoint</p>
-                    </div>
-                    <div>
-                        <p>IntelliJ</p>
-                        <p>Visual Studio Code</p>
-                    </div>
-                    <div>
-                        <p>WebStorm</p>
-                        <p>Visual Studio</p>
-                    </div>
-                    <div>
-                        <p>DataGrip</p>
-                    </div>
-                    <div>
-                        <p>PyCharm</P>
-                    </div>
-                </div>
-                <h2>Languages</h2>
-                <hr>
-                <div class="languages gap">
-                    <p>English / Native</p>
-                    <p>Dutch / Native</p>
-                </div>
-                <h5>Other Interests</h5>
-                <hr>
-                <div class="interests gap">
-                    <p>Raspberry Pi</p>
-                    <p>3D Printing</p>
-                    <p>Formula 1</p>
-                    <p>Rowing</p>
-                </div>
-            </div>
-
-        </div>
-        <div class="projects container" id="projects">
-            <h1>this.projects()</h1>
-
-            <div class="projectLists">
-                <div class="projectContainer">
-                    <h2>LinkedIn Plugin</h2>
-                    <p>For my internship I made a Chrome plugin for recruiter where they can save LinkedIn profiles.</p>
-                    <div class="listIcons">
-                        <div class="listProjectRelationIcons">
-                            <div class="projectRelationIcon">
-                                <a target="_blank" title="Mploy Associates" href="https://www.mployassociates.com/">
-                                    <img class="projectLogos" src="assets/img/mploylogo.png">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="technologyList">
-                        <div class="tech">HTML</div>
-                        <div class="tech">CSS</div>
-                        <div class="tech">JavaScript</div>
-                        <div class="tech">Chrome Plugin</div>
-                    </div>
-                </div>
-                <div class="projectContainer">
-                    <h2>Car Size Checker</h2>
-                    <p>Made an iframe that checks if the car fits in the car wash.</p>
-                    <div class="listIcons">
-                        <div class="listProjectRelationIcons">
-                            <div class="projectRelationIcon">
-                                <a target="_blank" title="Berkman" href="https://www.berkman.nl/">
-                                    <img class="projectLogos" src="assets/img/berkmanlogo.png">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="technologyList">
-                        <div class="tech">JavaScript</div>
-                    </div>
-                </div>
-                <div class="projectContainer">
-                    <h2>Tetris</h2>
-                    <p>For school project made Tetris with single player and online multiplayer.</p>
-                    <div class="listIcons">
-                        <div class="listProjectRelationIcons">
-                            <div class="projectRelationIcon">
-                                <a target="_blank" title="Hogeschool Utrecht" href="https://www.hu.nl/">
-                                    <img class="projectLogos" src="assets/img/hu.svg">
-                                </a>
-                            </div>
-                            <div class="projectRelationIcon">
-                                <a target="_blank" title="GitHub" href="https://github.com/lucasmoes/Tetris">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="ico projectLogos" viewBox="0 0 24 24" role="img" aria-labelledby="GitHub">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="technologyList">
-                        <div class="tech">C#</div>
-                        <div class="tech">.NET</div>
-                    </div>
-                </div>
-                <div class="projectContainer">
-                    <h2>UMC Utrecht WKZ</h2>
-                    <p>For school group project rebuilt their website to their technological standard</p>
-                    <div class="listIcons">
-                        <div class="listProjectRelationIcons">
-                            <div class="projectRelationIcon">
-                                <a target="_blank" title="Hogeschool Utrecht" href="https://www.hu.nl/">
-                                    <img class="projectLogos" src="assets/img/hu.svg">
-                                </a>
-                            </div>
-                            <div class="projectRelationIcon">
-                                <a target="_blank" title="UMC" href="https://www.umcutrecht.nl/nl">
-                                    <img class="projectLogos" src="assets/img/umcUtrechtLogo.png">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="technologyList">
-                        <div class="tech">C#</div>
-                        <div class="tech">.NET</div>
-                        <div class="tech">CMS</div>
-                    </div>
-                </div>
-                <div class="projectContainer">
-                    <h2>Lingo</h2>
-                    <p>For school project made a lingo API in test driven development method.</p>
-                    <div class="listIcons">
-                        <div class="listProjectRelationIcons">
-                            <div class="projectRelationIcon">
-                                <a target="_blank" title="Hogeschool Utrecht" href="https://www.hu.nl/">
-                                    <img class="projectLogos" src="assets/img/hu.svg">
-                                </a>
-                            </div>
-                            <div class="projectRelationIcon">
-                                <a target="_blank" title="GitHub" href="https://github.com/lucasmoes/LingoTrainer">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="ico projectLogos" viewBox="0 0 24 24" role="img" aria-labelledby="GitHub">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="technologyList">
-                        <div class="tech">Java</div>
-                        <div class="tech">Spring Boot</div>
-                        <div class="tech">Hibernate</div>
-                        <div class="tech">Postgresql</div>
-                        <div class="tech">JUnit</div>
-                        <div class="tech">CI</div>
-                    </div>
-                </div>
-                <div class="projectContainer">
-                    <h2>Black Jack</h2>
-                    <p>For school project made a black jack API</p>
-                    <div class="listIcons">
-                        <div class="listProjectRelationIcons">
-                            <div class="projectRelationIcon">
-                                <a target="_blank" title="Hogeschool Utrecht" href="https://www.hu.nl/">
-                                    <img class="projectLogos" src="assets/img/hu.svg">
-                                </a>
-                            </div>
-                            <div class="projectRelationIcon">
-                                <a target="_blank" title="GitHub" href="https://github.com/lucasmoes/Casino">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="ico projectLogos" viewBox="0 0 24 24" role="img" aria-labelledby="GitHub">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="technologyList">
-                        <div class="tech">Java</div>
-                        <div class="tech">Spring Boot</div>
-                        <div class="tech">Hibernate</div>
-                        <div class="tech">Postgresql</div>
-                    </div>
-                </div>
-                <div class="projectContainer">
-                    <h2>Steam Project</h2>
-                    <p>For school group project made a dashboard where you can see: online friends, game stats, recommended games to play, planner.</p>
-                    <div class="listIcons">
-                        <div class="listProjectRelationIcons">
-                            <div class="projectRelationIcon">
-                                <a target="_blank" title="Hogeschool Utrecht" href="https://www.hu.nl/">
-                                    <img class="projectLogos" src="assets/img/hu.svg">
-                                </a>
-                            </div>
-                            <!--                    <div class="projectRelationIcon">-->
-                            <!--                        <a target="_blank" title="GitHub" href="">-->
-                            <!--                            <svg xmlns="http://www.w3.org/2000/svg"-->
-                            <!--                                 class="ico projectLogos"-->
-                            <!--                                 viewBox="0 0 24 24"-->
-                            <!--                                 role="img"-->
-                            <!--                                 aria-labelledby="GitHub">-->
-                            <!--                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>-->
-                            <!--                            </svg>-->
-
-                            <!--                        </a>-->
-                            <!--                    </div>-->
-                        </div>
-                    </div>
-                    <div class="technologyList">
-                        <div class="tech">Python</div>
-                    </div>
-                </div>
-                <div class="projectContainer">
-                    <h2>NS Project</h2>
-                    <p>For school project made system where a traveller can leave a message and will be posted on Twitter with admin panel for moderation.</p>
-                    <div class="listIcons">
-                        <div class="listProjectRelationIcons">
-                            <div class="projectRelationIcon">
-                                <a target="_blank" title="Hogeschool Utrecht" href="https://www.hu.nl/">
-                                    <img class="projectLogos" src="assets/img/hu.svg">
-                                </a>
-                            </div>
-                            <!--                    <div class="projectRelationIcon">-->
-                            <!--                        <a target="_blank" title="GitHub" href="">-->
-                            <!--                            <svg xmlns="http://www.w3.org/2000/svg"-->
-                            <!--                                 class="ico projectLogos"-->
-                            <!--                                 viewBox="0 0 24 24"-->
-                            <!--                                 role="img"-->
-                            <!--                                 aria-labelledby="GitHub">-->
-                            <!--                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>-->
-                            <!--                            </svg>-->
-
-                            <!--                        </a>-->
-                            <!--                    </div>-->
-                        </div>
-                    </div>
-                    <div class="technologyList">
-                        <div class="tech">Python</div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="tline container" id="timeline">
-            <h1>this.timeline()</h1>
-            <div id="timeline-content">
-
-                <ul class="timeline">
-                    <li class="event" data-date="2022">
-                        <h3>First Software Development Internship</h3>
-                        <p>Started my first software development internship full-time at <a href="https://www.mployassociates.com/">Mploy Associates</a></p>
-                        <p class="miniDate">05-09-2022</p>
-
-                        <h3>First Software Development Job</h3>
-                        <p>Started my first software development job part-time at <a href="https://www.berkman.nl/">Berkman</a></p>
-                        <p class="miniDate">24-03-2022</p>
-                    </li>
-                    <li class="event" data-date="2021">
-                        <h3>Continuing Software Development</h3>
-                        <p>Started my second year in Software Development</p>
-                        <p class="miniDate">06-09-2021</p>
-
-                        <h3>Achieved my propaedeutic year</h3>
-                        <p class="miniDate">12-07-2021</p>
-
-                        <h3>Start to my software development career</h3>
-                        <p>Started studying Software Development due to where I had the most interest and what I mostly did in the projects</p>
-                        <p class="miniDate">01-02-2021</p>
-                    </li>
-                    <li class="event" data-date="2020">
-                        <h3>Starting my ICT career</h3>
-                        <p>Started studying ICT, which included AI, Programming, BIM, TI, CSC, to get a taste of a few areas in the ICT world</p>
-                        <p class="miniDate">31-08-2020</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-
-        <!--    <div class="contact container" id="contact">-->
-        <!--        <h1>this.contact()</h1>-->
-        <!--        <p>Contact me?</p>-->
-        <!--    </div>-->
-    </main>
     <footer>
-        <div class="footerContainer">
-            <div class="footerLinks">
-                <div>
-                    <a href="#home" class="no-underline">Home</a>
-                </div>
-                <div>
-                    <a href="#about" class="no-underline">About</a>
-                </div>
-                <div>
-                    <a href="#skills" class="no-underline">Skills</a>
-                </div>
-                <div>
-                    <a href="#projects" class="no-underline">Projects</a>
-                </div>
-                <div>
-                    <a href="#timeline" class="no-underline">Timeline</a>
-                </div>
-                <!--            <div>-->
-                <!--                <a href="#contact">Contact</a>-->
-                <!--            </div>-->
-            </div>
-            <p class="footerText">&copy; 2022 - Lucas Moes</p>
-        </div>
+        <p>&copy; 2026 Lucas Moes</p>
     </footer>
-    <div id="light-mode-notifier"></div>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-</body>
+</main>
 
+<script src="script.js"></script>
+</body>
 </html>
+
