@@ -1,0 +1,14 @@
+{
+  "name": "banner-generation-tool",
+  "version": "1.0.0",
+  "description": "Tool used to generate a banner image with the same styling as the website",
+  "main": "index.js",
+  "scripts": {
+    "shot": "node screenshot.js"
+  },
+  "author": "Lucas Moes",
+  "license": "ISC",
+  "dependencies": {
+    "playwright": "^1.60.0"
+  }
+}

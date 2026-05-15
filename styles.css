@@ -281,6 +281,14 @@ section {
     color: color-mix(in srgb, var(--text) 92%, transparent);
 }
 
+.json-key {
+    color: var(--accent);
+}
+
+.json-value {
+    color: var(--muted-text);
+}
+
 .hero-logo {
     width: clamp(56px, 8vw, 84px);
     height: auto;

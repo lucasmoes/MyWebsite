@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1200, initial-scale=1.0">
+  <title>Social Preview</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    html,
+    body {
+      width: 1200px;
+      height: 630px;
+      min-height: 630px;
+      overflow: hidden;
+      scroll-behavior: auto;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    body::before {
+      z-index: 0;
+    }
+
+    .blob {
+      position: absolute;
+      top: 50%;
+      left: 66%;
+      width: 1000px;
+      height: 1000px;
+    }
+
+    .preview-page {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(320px, 390px);
+      align-items: center;
+      gap: 44px;
+      padding: 72px 84px;
+    }
+
+    .preview-page .hero-left {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    .preview-page .hero-logo {
+      width: 78px;
+      margin-bottom: 20px;
+    }
+
+    .preview-page .name {
+      font-size: 78px;
+      letter-spacing: -0.04em;
+      line-height: 1.04;
+      max-width: 12ch;
+      font-weight: 800;
+    }
+
+    .preview-page .role {
+      margin-top: 14px;
+      font-size: 30px;
+    }
+
+    .preview-page .section-subtitle {
+      margin-top: 22px;
+      margin-bottom: 0;
+      max-width: 620px;
+      font-size: 22px;
+      line-height: 1.45;
+    }
+
+    .preview-page .socials {
+      margin-top: 32px;
+      gap: 14px;
+      flex-wrap: wrap;
+      font-size: 16px;
+    }
+
+    .preview-page .social-icon {
+      width: auto;
+      height: auto;
+      min-height: 42px;
+      padding: 0 18px;
+    }
+
+    .preview-page .social-icon.accent {
+      color: var(--accent);
+    }
+
+    .preview-page .hero-json-card {
+      padding: 24px;
+      overflow: hidden;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+    }
+
+    .preview-page .hero-json {
+      font-size: 17px;
+      line-height: 1.55;
+    }
+
+    .json-key {
+      color: var(--accent);
+    }
+
+    .json-value {
+      color: var(--muted-text);
+    }
+  </style>
+</head>
+<body>
+<div class="blob" aria-hidden="true"></div>
+
+<main class="preview-page">
+  <section class="hero-left" aria-label="Social preview introduction">
+    <img class="hero-logo" src="../assets/lmlogo.svg" alt="Lucas Moes logo">
+    <h1 class="name">Lucas Moes</h1>
+    <p class="role">Software Engineer</p>
+    <div class="socials" aria-label="Technology stack">
+      <span class="social-icon accent">Java</span>
+      <span class="social-icon">Spring Boot</span>
+      <span class="social-icon">Web Development</span>
+      <span class="social-icon">Agile</span>
+    </div>
+  </section>
+
+  <section class="hero-json-card" aria-label="Developer profile card">
+<pre class="hero-json">{
+  <span class="json-key">"name"</span>: <span class="json-value">"Lucas Moes"</span>,
+  <span class="json-key">"role"</span>: <span class="json-value">"Software Engineer"</span>,
+  <span class="json-key">"location"</span>: <span class="json-value">"Utrecht, NL"</span>,
+  <span class="json-key">"skills"</span>: [
+    <span class="json-value">"Java"</span>,
+    <span class="json-value">"Spring"</span>,
+    <span class="json-value">"Web Development"</span>
+  ]
+}</pre>
+  </section>
+</main>
+</body>
+</html>
