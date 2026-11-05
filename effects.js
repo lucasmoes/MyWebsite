@@ -46,8 +46,6 @@
         const y = clamp((current.y / height - 0.5) * 2, -1, 1);
         scene.style.setProperty("--scene-x", (x * 35).toFixed(2) + "px");
         scene.style.setProperty("--scene-y", (y * 35).toFixed(2) + "px");
-        scene.style.setProperty("--line-x", (x * 8).toFixed(2) + "px");
-        scene.style.setProperty("--line-y", (y * 8).toFixed(2) + "px");
         scene.style.setProperty("--pointer-x", current.x.toFixed(2) + "px");
         scene.style.setProperty("--pointer-y", current.y.toFixed(2) + "px");
         scene.style.setProperty("--pointer-opacity", current.opacity.toFixed(3));
