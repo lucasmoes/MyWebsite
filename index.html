@@ -26,25 +26,38 @@
     </script>
 </head>
 <body>
-<div class="blob" aria-hidden="true"></div>
+<a class="skip-link" href="#home">Skip to content</a>
 
-<div class="nav-burger" id="navBurger">
-    <!-- Hamburger icon -->
-    <button class="burger-icon" id="burgerBtn" aria-label="Open menu">
-        <span></span>
-        <span></span>
-        <span></span>
+<!-- The filter bends only the backdrop. Text and controls stay sharp. -->
+<svg class="filter-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <defs>
+        <filter id="glass-refraction" x="-10%" y="-10%" width="120%" height="120%" color-interpolation-filters="sRGB">
+            <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="1" seed="8" result="noise"/>
+            <feGaussianBlur in="noise" stdDeviation="2" result="soft-noise"/>
+            <feDisplacementMap in="SourceGraphic" in2="soft-noise" scale="12" xChannelSelector="R" yChannelSelector="G"/>
+        </filter>
+    </defs>
+</svg>
+
+<div class="ambient-scene" aria-hidden="true">
+    <div class="blob blob-primary"></div>
+    <div class="blob blob-secondary"></div>
+    <div class="pointer-light"></div>
+</div>
+
+<div class="nav-burger glass" id="navBurger" data-glass>
+    <button class="burger-icon" id="burgerBtn" type="button" aria-label="Open menu" aria-controls="mainMenu" aria-expanded="false">
+        <span class="burger-lines" aria-hidden="true"><span></span><span></span></span>
     </button>
 
-    <!-- Slide-out menu panel -->
-    <nav class="burger-menu" aria-label="Main">
-        <a href="#home">Home</a>
+    <nav class="burger-menu" id="mainMenu" aria-label="Main">
+        <a href="#home" aria-current="location">Home</a>
         <a href="#career">Career</a>
         <a href="#projects">Projects</a>
         <a href="#education">Education</a>
         <a href="#certifications">Certifications</a>
-        <span class="menu-sep" aria-hidden="true">|</span>
-        <button id="themeToggle" class="mode-toggle" aria-label="Toggle dark and light mode">
+        <span class="menu-sep" aria-hidden="true"></span>
+        <button id="themeToggle" class="mode-toggle" type="button" aria-label="Switch to light mode">
             <!-- Sun: shown in dark mode, click → go light -->
             <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <circle cx="12" cy="12" r="5"/>
@@ -61,12 +74,25 @@
             <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
             </svg>
+            <span class="theme-label">Light mode</span>
         </button>
     </nav>
 </div>
 
 <main class="page">
-    <section class="hero" id="home">
+    <section class="hero" id="home" tabindex="-1">
+        <!-- A cropped construction line follows the diagonal of the LM mark. -->
+        <svg class="architecture" viewBox="0 0 1120 780" fill="none" aria-hidden="true" focusable="false">
+            <defs>
+                <linearGradient id="line-fade" x1="660" y1="650" x2="1040" y2="100" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="currentColor" stop-opacity="0"/>
+                    <stop offset="0.25" stop-color="currentColor" stop-opacity="0.5"/>
+                    <stop offset="0.8" stop-color="currentColor" stop-opacity="0.5"/>
+                    <stop offset="1" stop-color="currentColor" stop-opacity="0"/>
+                </linearGradient>
+            </defs>
+            <path d="M660 650L1040 108M676 650L1056 108" stroke="url(#line-fade)"/>
+        </svg>
         <div class="hero-content">
             <div class="hero-left">
                 <img class="hero-logo" src="assets/lmlogo.svg" alt="Lucas Moes logo">
@@ -86,9 +112,9 @@
                 </div>
             </div>
 
-            <aside class="hero-json-card" aria-label="Profile JSON">
+            <aside class="hero-json-card glass" aria-label="Profile JSON" data-glass>
 <pre class="hero-json">{
-  <span class="json-key">"name</span>: <span class="json-value">"Lucas Moes"</span>,
+  <span class="json-key">"name"</span>: <span class="json-value">"Lucas Moes"</span>,
   <span class="json-key">"role"</span>: <span class="json-value">"Software Engineer"</span>,
   <span class="json-key">"location"</span>: <span class="json-value">"Utrecht, NL"</span>,
   <span class="json-key">"currentCompany"</span>: <span class="json-value">"ICT TriOpSys"</span>,
@@ -101,81 +127,102 @@
   <span class="json-key">"contact"</span>: <span class="json-value">{</span>
     <span class="json-key">"linkedin"</span>: <span class="json-value">"lucas-moes"</span>,
     <span class="json-key">"github"</span>: <span class="json-value">"lucasmoes"</span>
-  <span class="json-value">}</span>,
+  <span class="json-value">}</span>
 }</pre>
             </aside>
         </div>
     </section>
 
-    <section id="career">
+    <section id="career" tabindex="-1">
         <h2 class="section-title">Career</h2>
         <p class="section-subtitle">A full overview of my professional experience, from internships to current role.</p>
 
-        <div class="card-grid">
-            <article class="card">
-                <div class="card-head">
-                    <h3 class="card-title">Software Engineer | ICT TriOpSys</h3>
-                    <a class="logo-link" href="https://www.ict.eu/" target="_blank" rel="noopener noreferrer" aria-label="ICT TriOpSys website">
+        <div class="career-list">
+            <article class="career-entry">
+                <div class="career-meta">
+                    <p class="card-date">Feb 2026 - Present<span class="career-location">Woerden</span></p>
+                    <div class="career-logos">
+                        <a class="logo-link" href="https://www.ict.eu/" target="_blank" rel="noopener noreferrer" aria-label="ICT TriOpSys website">
                         <img class="company-logo" src="assets/ICT%20TriOpSys.png" alt="ICT TriOpSys logo">
                     </a>
+                    </div>
                 </div>
-                <p class="card-date">Feb 2026 - Present | Woerden</p>
-                <p>Software engineer working on projects for clients</p>
+                <div class="career-content">
+                    <h3 class="card-title">ICT TriOpSys</h3>
+                    <p class="career-role">Software Engineer</p>
+                    <p>Software engineer working on projects for clients</p>
+                </div>
             </article>
 
-            <article class="card">
-                <div class="card-head">
-                    <h3 class="card-title">Software Engineer | ProRail (via Sopra Steria)</h3>
-                    <div class="card-logos-group">
+            <article class="career-entry">
+                <div class="career-meta">
+                    <p class="card-date">Feb 2025 - Jan 2026<span class="career-location">Nieuwegein & Utrecht</span></p>
+                    <div class="career-logos">
                         <a class="logo-link" href="https://www.soprasteria.com/" target="_blank" rel="noopener noreferrer" aria-label="Sopra Steria website">
                             <img class="company-logo" src="assets/soprasteria.png" alt="Sopra Steria logo">
-                        </a>
-                        <a class="logo-link" href="https://www.prorail.nl/" target="_blank" rel="noopener noreferrer" aria-label="ProRail website">
+                        </a><a class="logo-link" href="https://www.prorail.nl/" target="_blank" rel="noopener noreferrer" aria-label="ProRail website">
                             <img class="company-logo" src="assets/prorail.svg" alt="ProRail logo">
                         </a>
                     </div>
                 </div>
-                <p class="card-date">Feb 2025 - Jan 2026 | Nieuwegein & Utrecht</p>
-                <p>Started with a traineeship at Sopra Steria in February, then transitioned to Software Engineer role at client ProRail in May. Contributed to the Trinity simulation project — a sophisticated environment replicating official Train Traffic Controller software for training and R&D purposes. Built new modules in the Java backend and React frontend to support realistic train scenarios and give instructors and testers greater control during training sessions. Actively improved quality through code reviews, test support, and release pipeline optimization, enabling rapid and reliable feature delivery.</p>
+                <div class="career-content">
+                    <h3 class="card-title">ProRail</h3>
+                    <p class="career-role">Software Engineer · via Sopra Steria</p>
+                    <p>Started with a traineeship at Sopra Steria in February, then transitioned to Software Engineer role at client ProRail in May. Contributed to the Trinity simulation project — a sophisticated environment replicating official Train Traffic Controller software for training and R&D purposes. Built new modules in the Java backend and React frontend to support realistic train scenarios and give instructors and testers greater control during training sessions. Actively improved quality through code reviews, test support, and release pipeline optimization, enabling rapid and reliable feature delivery.</p>
+                </div>
             </article>
 
-            <article class="card">
-                <div class="card-head">
-                    <h3 class="card-title">Software Developer Intern | AFAS Software</h3>
-                    <a class="logo-link" href="https://www.afas.nl/" target="_blank" rel="noopener noreferrer" aria-label="AFAS Software website">
+            <article class="career-entry">
+                <div class="career-meta">
+                    <p class="card-date">Feb 2024 - Jun 2024<span class="career-location">Leusden</span></p>
+                    <div class="career-logos">
+                        <a class="logo-link" href="https://www.afas.nl/" target="_blank" rel="noopener noreferrer" aria-label="AFAS Software website">
                         <img class="company-logo" src="assets/afas.svg" alt="Afas logo">
                     </a>
+                    </div>
                 </div>
-                <p class="card-date">Feb 2024 - Jun 2024 | Leusden</p>
-                <p>Developed a web editor for AFAS to accelerate and simplify the development process of their tax software in response to legislative changes.</p>
+                <div class="career-content">
+                    <h3 class="card-title">AFAS Software</h3>
+                    <p class="career-role">Software Developer Intern</p>
+                    <p>Developed a web editor for AFAS to accelerate and simplify the development process of their tax software in response to legislative changes.</p>
+                </div>
             </article>
 
-            <article class="card">
-                <div class="card-head">
-                    <h3 class="card-title">Software Developer | Berkman Energie Service</h3>
-                    <a class="logo-link" href="https://www.berkman.nl/" target="_blank" rel="noopener noreferrer" aria-label="Berkman website">
+            <article class="career-entry">
+                <div class="career-meta">
+                    <p class="card-date">Mar 2022 - Mar 2024<span class="career-location">Barendrecht</span></p>
+                    <div class="career-logos">
+                        <a class="logo-link" href="https://www.berkman.nl/" target="_blank" rel="noopener noreferrer" aria-label="Berkman website">
                         <img class="company-logo" src="assets/berkmanlogo.png" alt="Berkman logo">
                     </a>
+                    </div>
                 </div>
-                <p class="card-date">Mar 2022 - Mar 2024 | Barendrecht</p>
-                <p>Developed a program allowing customers to enter their license plate number to check if their car fits in the car wash. Created an interactive map enabling customers to locate Washboxes and tire pumps. Implemented small software solutions to simplify day-to-day operations.</p>
+                <div class="career-content">
+                    <h3 class="card-title">Berkman Energie Service</h3>
+                    <p class="career-role">Software Developer</p>
+                    <p>Developed a program allowing customers to enter their license plate number to check if their car fits in the car wash. Created an interactive map enabling customers to locate Washboxes and tire pumps. Implemented small software solutions to simplify day-to-day operations.</p>
+                </div>
             </article>
 
-            <article class="card">
-                <div class="card-head">
-                    <h3 class="card-title">Intern Corporate IT | Mploy Associates</h3>
-                    <a class="logo-link" href="https://www.mployassociates.com/" target="_blank" rel="noopener noreferrer" aria-label="Mploy Associates website">
+            <article class="career-entry">
+                <div class="career-meta">
+                    <p class="card-date">Sep 2022 - Jan 2023<span class="career-location">Utrecht</span></p>
+                    <div class="career-logos">
+                        <a class="logo-link" href="https://www.mployassociates.com/" target="_blank" rel="noopener noreferrer" aria-label="Mploy Associates website">
                         <img class="company-logo" src="assets/mploylogo.png" alt="Mploy Associates logo">
                     </a>
+                    </div>
                 </div>
-                <p class="card-date">Sep 2022 - Jan 2023 | Utrecht</p>
-                <p>Independently developed, implemented, and managed a complete Chrome plug-in that allows recruiters to save LinkedIn profiles with specific data into a database.</p>
+                <div class="career-content">
+                    <h3 class="card-title">Mploy Associates</h3>
+                    <p class="career-role">Intern Corporate IT</p>
+                    <p>Independently developed, implemented, and managed a complete Chrome plug-in that allows recruiters to save LinkedIn profiles with specific data into a database.</p>
+                </div>
             </article>
-
         </div>
     </section>
 
-    <section id="projects">
+    <section id="projects" tabindex="-1">
         <h2 class="section-title">Projects</h2>
         <p class="section-subtitle">A selection of projects from work, internships, school, and freelance work.</p>
         <div class="card-grid">
@@ -380,7 +427,7 @@
         </div>
     </section>
 
-    <section id="education">
+    <section id="education" tabindex="-1">
         <h2 class="section-title">Education</h2>
         <p class="section-subtitle">My academic background from secondary school through university.</p>
 
@@ -403,7 +450,7 @@
         </div>
     </section>
 
-    <section id="certifications">
+    <section id="certifications" tabindex="-1">
         <h2 class="section-title">Certifications</h2>
         <p class="section-subtitle">Professional certifications and awards.</p>
 
@@ -428,6 +475,7 @@
 </main>
 
 <script src="script.js"></script>
+<script src="effects.js"></script>
 </body>
 </html>
 
